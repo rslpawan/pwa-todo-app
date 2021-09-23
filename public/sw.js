@@ -10,6 +10,12 @@ this.addEventListener('install', (e) => {
                 '/static/js/bundle.js',
                 '/index.html',
                 '/static/js/vendors~main.chunk.js',
+                '/static/js/main.69a93024.chunk.js',
+                '/static/css/2.28bb0c3d.chunk.css',
+                '/static/css/main.88300200.chunk.css',
+                '/static/js/2.185c13cb.chunk.js',
+                '/static/js/main.69a93024.chunk.js',
+                'logo192.png'
                 
             ]);
         })
