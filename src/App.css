@@ -1,38 +1,56 @@
-.App {
+.navbar-brand {
+  color: white !important;
+  font-size: 23px !important;
+}
+.navbar {
+  height: 60px;
+}
+.navbar > .container {
   text-align: center;
+  display: block !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.todo-container {
+  text-align: center;
+  width: 95%;
+  max-width: 700px;
+  margin: auto;
+  margin-top: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.todo-container input {
+  width: 95%;
+  max-width: 500px;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 27px;
+  border: none;
+  box-shadow: 0px 2px 10px #c2c2c2;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo-add-btn {
+  margin-top: 20px;
+  width: 200px;
+  max-width: 200px;
+}
+
+.todo-list-container {
+  margin-top: 20px;
+}
+.todo-list-container .card-body {
+  text-align: left;
+  padding: 10px 20px;
+}
+.todo-list-container .card-body .todo-list-item {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.todo-trash-btn {
+  background: none !important;
+  color: red !important;
+  border: none !important;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+p {
+  margin: 0 !important;
 }
