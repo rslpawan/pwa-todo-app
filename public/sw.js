@@ -10,12 +10,12 @@ this.addEventListener('install', (e) => {
                 // '/static/js/bundle.js',
                 // '/index.html',
                 // '/static/js/vendors~main.chunk.js',
-                // '/static/js/main.69a93024.chunk.js',
-                // '/static/css/2.28bb0c3d.chunk.css',
-                // '/static/css/main.88300200.chunk.css',
-                // '/static/js/2.185c13cb.chunk.js',
-                // '/static/js/main.69a93024.chunk.js',
-                // 'logo192.png'
+                '/static/css/2.28bb0c3d.chunk.css',
+                '/static/css/main.88300200.chunk.css',
+                '/static/js/2.185c13cb.chunk.js',
+                '/static/js/main.69a93024.chunk.js',
+                'favicon.ico',
+                'manifest.json'
                 
             ]);
         })
@@ -24,7 +24,7 @@ this.addEventListener('install', (e) => {
 
 this.addEventListener('fetch', (e) => {
     if(!navigator.onLine){
-        if(e.request.url === "http://localhost:3000/static/js/main.chunk.js"){
+        if(e.request.url === "https://boring-panini-af4195.netlify.app/static/js/main.chunk.js"){
             e.waitUntil(
                 this.registration.showNotification("No internet!", {
                     body: "You are offline!"
