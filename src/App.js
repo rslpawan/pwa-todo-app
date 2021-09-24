@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { Container, Navbar, Button, Card, Alert } from 'react-bootstrap';
 import './App.css';
 import localforage from 'localforage';
-import db from './firebase';
+import db, {firestore} from './firebase';
 
 function App() {
 
@@ -44,6 +44,10 @@ function App() {
     })
   })
 
+  const onHandleRemove = (e) => {
+    let id = e
+    firestore.collection('todos').doc(id).delete();
+  }
 
 
   return (
@@ -63,11 +67,11 @@ function App() {
             null
           }
         </div>
-        <form>
+        {/* <form> */}
           <input type="search" placeholder="Add a todo" onChange={(e) => setItem(e.target.value)} required={true} />
           <br />
           <Button className="todo-add-btn shadow"  variant="primary" onClick={onHandleSubmit}>Add todo</Button>
-        </form>
+        {/* </form> */}
         {
           items.map((item) => {
             return (
@@ -75,6 +79,7 @@ function App() {
                 <Card.Body>
                   <div className="todo-list-item">
                     <p>{item.item}</p>
+                    <Button onClick={() => onHandleRemove(item.id) } variant="light">&#10005;</Button>
                   </div>
                 </Card.Body>
               </Card>
