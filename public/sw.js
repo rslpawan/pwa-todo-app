@@ -24,7 +24,7 @@ this.addEventListener('install', (e) => {
 
 this.addEventListener('fetch', (e) => {
     if(!navigator.onLine){
-        if(e.request.url === "https://boring-panini-af4195.netlify.app/logo192.png"){
+        if(e.request.url === "https://todo-pwa-app.netlify.app/logo192.png"){
             e.waitUntil(
                 this.registration.showNotification("No internet!", {
                     body: "You are offline!"
